@@ -7,13 +7,84 @@
 }
 
 .topbar {
-    padding: 10px 130px 5px 130px;
+    display: grid;
+    grid-template-columns: 224px auto;
+    grid-gap: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+.doc-name {
+    border: 1px solid black;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc-name input {
+    border: 0px solid black;
+    outline: none;
+    width: 170px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.doc-name:focus-within {
+    border: 2px solid black;
+}
+
+.doc-name:focus-within input {
+    border-bottom: 1px solid black;
+}
+
+.doc-name:hover {
+    border: 2px solid black;
+}
+
+.doc-name a:focus {
+    border-radius: 999px;
+}
+
+.doc-name a span {
+    color: black;
 }
 
 .toolbar {
     border: 1px solid black;
     border-radius: 999px;
     height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    border: 1px solid black;
+    border-radius: 999px;
+    width: 210px;
+    height: 40px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search:focus-within {
+    border: 2px solid black;
+}
+
+.search:focus-within input {
+    border-bottom: 1px solid black;
+}
+
+.search:hover {
+    border: 2px solid black;
+}
+
+.search input {
+    border: 0px solid black;
+    outline: none;
+    width: 160px;
+    font-size: 18px;
 }
 
 .pages {
