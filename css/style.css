@@ -7,10 +7,13 @@
 }
 
 .topbar {
+    padding: 10px 10px 10px 10px;
+}
+
+.top {
     display: grid;
     grid-template-columns: 224px auto;
     grid-gap: 10px;
-    padding: 10px 10px 10px 10px;
 }
 
 .doc-name {
@@ -87,16 +90,25 @@
     font-size: 18px;
 }
 
+.ribbon {
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 150px;
+    margin: 10px 0 0 0;
+}
+
 .pages {
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
 }
 
-.pages input {
+.pages textarea {
+    resize: none;
     margin: 10px auto auto auto;
     font-size: 18px;
     width: 80%;
     outline: none;
+    font-family: arial;
     border: 0px solid black;
 }
