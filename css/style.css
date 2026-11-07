@@ -162,14 +162,38 @@ html::-webkit-scrollbar-thumb:hover {
 .ribbon {
     border: 1px solid black;
     border-radius: 20px;
-    height: 150px;
+    height: 50px;
     margin: 10px 0 0 0;
+    padding: 5px;
+}
+
+.home-styling {
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    padding: 5px;
+}
+
+.font-family {
+    margin: 0px 5px 0px 0px;
+    /* border: 1px solid black; */
+}
+
+.font-family input {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 150px;
+    outline: none;
+    font-size: 18px;
+    padding: 1px;
+    background-color: lightgrey;
 }
 
 .pages {
     /* border: 1px solid black; */
     display: flex;
-    padding: 230px 0px 10px 0px;
+    padding: 130px 0px 10px 0px;
     justify-content: center;
 }
 

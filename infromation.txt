@@ -1,0 +1,10 @@
+Home Tab styling:
+1. Font Size
+2. Font family
+3. Bold
+4. Italic
+5. Underline
+6. Font Color
+7. Font Background Color
+8. Alignment
+9. Lists
