@@ -4,6 +4,11 @@ const home = document.querySelector('.home');
 const insert = document.querySelector('.insert');
 const layout = document.querySelector('.layout');
 const design = document.querySelector('.design');
+const homeStyling = document.querySelector('.home-styling');
+const viewStyling = document.querySelector('.view-styling');
+const insertStyling = document.querySelector('.insert-styling');
+const layoutStyling = document.querySelector('.layout-styling');
+const designStyling = document.querySelector('.design-styling');
 
 function autoGrow() {
     box.style.height = 'auto';
@@ -14,48 +19,67 @@ box.addEventListener('input', autoGrow);
 window.addEventListener('resize', autoGrow);
 autoGrow();
 
-function viewTabClick() {
-    home.style.border = '1px solid white';
-    view.style.border = '1px solid black';
-    layout.style.border = '1px solid white';
-    design.style.border = '1px solid white';
-    insert.style.border = '1px solid white';
-}
+view.addEventListener('click', function() {
+    view.style.backgroundColor = 'white';
+    viewStyling.style.display = 'block';
+    home.style.backgroundColor = 'transparent';
+    homeStyling.style.display = 'none';
+    insert.style.backgroundColor = 'transparent';
+    insertStyling.style.display = 'none';
+    layout.style.backgroundColor = 'transparent';
+    layoutStyling.style.display = 'none';
+    design.style.backgroundColor = 'transparent';
+    designStyling.style.display = 'none';
+});
 
-function homeTabClick() {
-    home.style.border = '1px solid black';
-    view.style.border = '1px solid white';
-    layout.style.border = '1px solid white';
-    design.style.border = '1px solid white';
-    insert.style.border = '1px solid white';
-}
+home.addEventListener('click', function() {
+    view.style.backgroundColor = 'transparent';
+    viewStyling.style.display = 'none';
+    home.style.backgroundColor = 'white';
+    homeStyling.style.display = 'block';
+    insert.style.backgroundColor = 'transparent';
+    insertStyling.style.display = 'none';
+    layout.style.backgroundColor = 'transparent';
+    layoutStyling.style.display = 'none';
+    design.style.backgroundColor = 'transparent';
+    designStyling.style.display = 'none';
+});
 
-function insertTabClick() {
-    home.style.border = '1px solid white';
-    view.style.border = '1px solid white';
-    layout.style.border = '1px solid white';
-    design.style.border = '1px solid white';
-    insert.style.border = '1px solid black';
-}
+insert.addEventListener('click', function() {
+    view.style.backgroundColor = 'transparent';
+    viewStyling.style.display = 'none';
+    home.style.backgroundColor = 'transparent';
+    homeStyling.style.display = 'none';
+    insert.style.backgroundColor = 'white';
+    insertStyling.style.display = 'block';
+    layout.style.backgroundColor = 'transparent';
+    layoutStyling.style.display = 'none';
+    design.style.backgroundColor = 'transparent';
+    designStyling.style.display = 'none';
+});
 
-function layoutTabClick() {
-    home.style.border = '1px solid white';
-    view.style.border = '1px solid white';
-    layout.style.border = '1px solid black';
-    design.style.border = '1px solid white';
-    insert.style.border = '1px solid white';
-}
+layout.addEventListener('click', function() {
+    view.style.backgroundColor = 'transparent';
+    viewStyling.style.display = 'none';
+    home.style.backgroundColor = 'transparent';
+    homeStyling.style.display = 'none';
+    insert.style.backgroundColor = 'transparent';
+    insertStyling.style.display = 'none';
+    layout.style.backgroundColor = 'white';
+    layoutStyling.style.display = 'block';
+    design.style.backgroundColor = 'transparent';
+    designStyling.style.display = 'none';
+});
 
-function designTabClick() {
-    home.style.border = '1px solid white';
-    view.style.border = '1px solid white';
-    layout.style.border = '1px solid white';
-    design.style.border = '1px solid black';
-    insert.style.border = '1px solid white';
-}
-
-view.addEventListener('click', viewTabClick);
-home.addEventListener('click', homeTabClick);
-insert.addEventListener('click', insertTabClick);
-layout.addEventListener('click', layoutTabClick);
-design.addEventListener('click', designTabClick);
+design.addEventListener('click', function() {
+    view.style.backgroundColor = 'transparent';
+    viewStyling.style.display = 'none';
+    home.style.backgroundColor = 'transparent';
+    homeStyling.style.display = 'none';
+    insert.style.backgroundColor = 'transparent';
+    insertStyling.style.display = 'none';
+    layout.style.backgroundColor = 'transparent';
+    layoutStyling.style.display = 'none';
+    design.style.backgroundColor = 'white';
+    designStyling.style.display = 'block';
+});
