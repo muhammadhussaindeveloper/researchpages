@@ -179,7 +179,7 @@ html::-webkit-scrollbar-thumb:hover {
     border-radius: 20px;
     height: 50px;
     margin: 10px 0 0 0;
-    padding: 5px;
+    padding: 10px;
     display: grid;
     grid-template-columns: auto;
     background-color: var(--tea-green);
@@ -187,17 +187,14 @@ html::-webkit-scrollbar-thumb:hover {
 
 .home-styling {
     /* border: 1px solid black; */
-    border-radius: 20px;
-    height: 40px;
+    height: 30px;
     display: flex;
-    padding: 5px;
 }
 
 .font-family {
     margin: 0px 5px 0px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    height: 30px;
     background-color: transparent;
     /* border-radius: 5px; */
     /* border: 1px solid black; */
@@ -208,13 +205,13 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .font-family input {
-    border: 0px solid lightgray;
+    border: 0px solid black;
     border-bottom: 1px solid transparent;
     border-radius: 0px;
     width: 150px;
     outline: none;
     font-size: 18px;
-    padding: 1px;
+    margin: 6px 0 6px 0;
     background-color: transparent;
 }
 
@@ -222,8 +219,12 @@ html::-webkit-scrollbar-thumb:hover {
     border-bottom: 1px solid black;
 }
 
-.font-family-dropdrown {
-    border: 2px solid black;
+.font-family-dropdown {
+    /* border: 1px solid black; */
+    padding: 5px;
+    display: none;
+    border-radius: 5px;
+    background-color: var(--beige);
 }
 
 .view-styling {

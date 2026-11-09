@@ -9,6 +9,8 @@ const viewStyling = document.querySelector('.view-styling');
 const insertStyling = document.querySelector('.insert-styling');
 const layoutStyling = document.querySelector('.layout-styling');
 const designStyling = document.querySelector('.design-styling');
+const fontFamily = document.getElementById('fontFamily');
+const fontFamilyDropdown = document.querySelector('.font-family-dropdown');
 
 function autoGrow() {
     box.style.height = 'auto';
@@ -82,4 +84,12 @@ design.addEventListener('click', function() {
     layoutStyling.style.display = 'none';
     design.style.backgroundColor = 'white';
     designStyling.style.display = 'block';
+});
+
+fontFamily.addEventListener('focus', function() {
+    fontFamilyDropdown.style.display = 'block';
+});
+
+fontFamily.addEventListener('blur', function() {
+    fontFamilyDropdown.style.display = 'none';
 });
