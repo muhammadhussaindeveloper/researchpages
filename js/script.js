@@ -11,6 +11,11 @@ const layoutStyling = document.querySelector('.layout-styling');
 const designStyling = document.querySelector('.design-styling');
 const fontFamily = document.getElementById('fontFamily');
 const fontFamilyDropdown = document.querySelector('.font-family-dropdown');
+const fontFamilies = [
+    { name: "Arial"},
+    { name: "Times New Roman"},
+    { name: "Roboto"}
+];
 
 function autoGrow() {
     box.style.height = 'auto';
@@ -86,10 +91,43 @@ design.addEventListener('click', function() {
     designStyling.style.display = 'block';
 });
 
-fontFamily.addEventListener('focus', function() {
-    fontFamilyDropdown.style.display = 'block';
-});
+// fontFamily.addEventListener('focus', function() {
+    // fontFamilyDropdown.style.display = 'block';
+// });
 
 fontFamily.addEventListener('blur', function() {
     fontFamilyDropdown.style.display = 'none';
 });
+
+function searchFontFamilies() {
+    const query = fontFamily.value.trim().toLowerCase();
+    fontFamilyDropdown.innerHTML = '';
+
+    fontFamilyDropdown.style.display = 'block';
+
+    if (query === '') {
+        fontFamilies.forEach(element => {
+            const p = document.createElement('p');
+            p.textContent = element.name;
+
+            fontFamilyDropdown.appendChild(p);
+        });
+    } else {
+        const found = fontFamilies.filter(item =>
+            item.name.trim().toLowerCase().includes(query)
+        );
+
+        if (found.length === 0) {
+            fontFamilyDropdown.textContent = 'No results found.';
+        } else {
+            found.forEach(element => {
+                const p = document.createElement('p');
+                p.textContent = element.name;
+        
+                fontFamilyDropdown.appendChild(p);
+            });
+        }
+    }
+}
+
+fontFamily.addEventListener('input', searchFontFamilies);
